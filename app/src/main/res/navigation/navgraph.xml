@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navgraph"
+    app:startDestination="@id/fragment_breaking">
+    <!--here we can add animations and routes when we move from one fragment to another one-->
+    <fragment
+        android:id="@+id/articlenews"
+        android:name="ui.fragments.news_article"
+        android:label="articlenews" />
+    <fragment
+        android:id="@+id/fragment_breaking"
+        android:name="ui.fragments.fragment_breaking"
+        android:label="fragment_breaking">
+        <!--here we add animations-->
+        <action
+            android:id="@+id/action_fragment_breaking_to_articlenews"
+            app:destination="@id/articlenews"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/savednews"
+        android:name="ui.fragments.savednews"
+        android:label="savednews">
+        <action
+            android:id="@+id/action_savednews_to_articlenews"
+            app:destination="@id/articlenews"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out" />
+        <action
+            android:id="@+id/action_savednews_to_articlenews2"
+            app:destination="@id/articlenews"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out" />
+        <action
+            android:id="@+id/action_savednews_to_articlenews3"
+            app:destination="@id/articlenews"
+            app:enterAnim="@anim/slide_right_in"
+            app:exitAnim="@anim/slide_left_out"
+            app:popEnterAnim="@anim/slide_left_in"
+            app:popExitAnim="@anim/slide_right_out" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchnews"
+        android:name="ui.fragments.searchnews"
+        android:label="searchnews">
+        <action
+            android:id="@+id/action_searchnews_to_articlenews"
+            app:destination="@id/articlenews" />
+    </fragment>
+</navigation>
